@@ -86,7 +86,7 @@ public class HibernateConfig {
         hibernateProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQL9Dialect");
         hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "create");
         hibernateProperties.setProperty("hibernate.show_sql", "true");
-        hibernateProperties.setProperty("hibernate.current_session_context_class","thread");
+        //hibernateProperties.setProperty("hibernate.current_session_context_class","thread");
 
         entityManager.setJpaProperties(hibernateProperties);
 
