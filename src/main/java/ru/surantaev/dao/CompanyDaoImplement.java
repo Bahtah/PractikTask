@@ -20,24 +20,30 @@ public class CompanyDaoImplement implements CompanyDao{
 
     @Override
     public void saveCompany(Company company) {
-        entityManager.persist(company);
+        Long id = company.getId();
+        if (id == null) {
+            entityManager.persist(company);
+        }else {
+            entityManager.merge(company);
+        }
+
     }
 
     @Override
-    public void deleteCompany(int id) {
+    public void deleteCompany(Long id) {
         entityManager.remove(getCompanyById(id));
     }
 
     @Override
-    public Company getCompanyById(int id) {
+    public Company getCompanyById(Long id) {
         return entityManager.find(Company.class, id);
     }
 
     @Override
-    public void updateCompany(Company company, int id) {
+    public void updateCompany(Company company, Long id) {
         Company company1 = getCompanyById(id);
         company1.setName(company.getName());
-        company1.setLocatedCountry(company.getLocatedCountry());
+        //company1.setLocatedCountry(company.getLocatedCountry());
         entityManager.merge(company1);
     }
 }

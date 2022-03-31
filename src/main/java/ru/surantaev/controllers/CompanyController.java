@@ -43,7 +43,7 @@ public class CompanyController {
     //Ссылка на форму для создании компании
     /*--------------------------------------------удаление пользователя---------------------------*/
     @DeleteMapping("/company-delete/{id}")
-    public String deleteCompany(@PathVariable("id") int id) {
+    public String deleteCompany(@PathVariable("id") Long id) {
         companyService.deleteCompany(id);
         return "redirect:/";
     }
@@ -51,7 +51,7 @@ public class CompanyController {
     /*--------------------------------------------обновление пользователя---------------------------*/
 
     @GetMapping("/company-update/{id}")
-    public String updateUserForm(@PathVariable("id") int id, Model model){
+    public String updateUserForm(@PathVariable("id") Long id, Model model){
         Company company = companyService.getCompanyById(id);
         model.addAttribute("company", company);
         return "company/company-update";

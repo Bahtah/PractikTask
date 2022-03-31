@@ -8,7 +8,7 @@ public interface CompanyDao {
 
     List<Company> getAllCompany();
     void saveCompany(Company company);
-    void deleteCompany(int id);
-    Company getCompanyById(int id);
-    void updateCompany(Company company, int id);
+    void deleteCompany(Long id);
+    Company getCompanyById(Long id);
+    void updateCompany(Company company, Long id);
 }

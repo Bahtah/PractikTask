@@ -15,7 +15,7 @@ public class Company {
     @Id
     @SequenceGenerator(name = "company_id", sequenceName = "company_sequence", allocationSize = 1, schema = "home_task_base")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "company_id")
-    private int id;
+    private Long id;
 
     @Column(name = "company_name")
     private String name;
