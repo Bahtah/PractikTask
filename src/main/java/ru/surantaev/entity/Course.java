@@ -16,7 +16,7 @@ public class Course {
     @Id
     @SequenceGenerator(name = "course_sq", sequenceName = "course_sequence", allocationSize = 1, schema = "home_task_base")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "course_sq")
-    private int id;
+    private Long id;
 
     @Column(name = "course_name")
     private String courseName;

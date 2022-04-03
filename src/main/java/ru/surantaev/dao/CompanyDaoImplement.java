@@ -26,7 +26,6 @@ public class CompanyDaoImplement implements CompanyDao{
         }else {
             entityManager.merge(company);
         }
-
     }
 
     @Override
