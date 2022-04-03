@@ -12,6 +12,7 @@
 <div class="container">
 
     <form action="#" th:action="@{course-save}" th:object="${course}" method="post">
+
         <div class="mb-3">
             <label for="courseName" class="form-label">Name</label>
             <input type="text" th:field="*{courseName}" id="courseName" class="form-control"  aria-describedby="emailHelp">

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import ru.surantaev.entity.Company;
 import ru.surantaev.entity.Course;
 import ru.surantaev.entity.Teacher;
+import ru.surantaev.service.CompanyService;
 import ru.surantaev.service.CourseService;
 
 import java.util.List;
@@ -16,10 +17,12 @@ import java.util.List;
 public class CourseController {
 
     private final CourseService courseService;
+    private final CompanyService companyService;
 
     @Autowired
-    public CourseController(CourseService courseService) {
+    public CourseController(CourseService courseService, CompanyService companyService) {
         this.courseService = courseService;
+        this.companyService = companyService;
     }
 
     @GetMapping("/allCourse")
@@ -42,7 +45,8 @@ public class CourseController {
     }
 
     @PostMapping("/course-save")
-    public String createCourse(@ModelAttribute("course") Course course) {
+    public String createCourse(@ModelAttribute("course") Course course, @PathVariable Long id) {
+        course.setCompany(companyService.getCompanyById(id));
         courseService.saveCourse(course);
         return "redirect:/course/allCourse";
     }

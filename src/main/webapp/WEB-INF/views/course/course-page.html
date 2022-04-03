@@ -11,6 +11,12 @@
 </head>
 <body class="bg-success p-2 text-white bg-opacity-75">
 
+<div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+    <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        <a class="fs-2 text-uppercase text-white me-3 py-2 text-dark text-decoration-none" href="/">All Company</a>
+    </nav>
+</div>
+
 <h1 class="text-center text-white bg-primary mt-2">All Courses</h1>
 
 <div class="container">
@@ -42,10 +48,9 @@
                     <p th:text="${all.getTeacher().getFirstName()}"></p>
                 </td>
             </tr>
-        <section>
+        </section>
     </table>
 
-    <a button type="button" class="btn btn-primary" href="/course/course-create">CREATE COURSE</button></a>
 </div>
 
 </body>

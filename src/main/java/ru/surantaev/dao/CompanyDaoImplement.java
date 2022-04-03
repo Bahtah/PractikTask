@@ -42,7 +42,6 @@ public class CompanyDaoImplement implements CompanyDao{
     public void updateCompany(Company company, Long id) {
         Company company1 = getCompanyById(id);
         company1.setName(company.getName());
-        //company1.setLocatedCountry(company.getLocatedCountry());
         entityManager.merge(company1);
     }
 }
