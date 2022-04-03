@@ -8,6 +8,7 @@
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/course-id.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/course-page.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/course/course-id.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/course" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/course/course-page.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/course" />
       </map>
     </option>
   </component>
